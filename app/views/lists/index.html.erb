@@ -1,15 +1,18 @@
-<div class="container">
-<h1>Your List</h1>
+<div class="container mt-5">
 
-  <ul>
+<h1>Create Your Watch List</h1>
+<h2>Your List</h2>
+
+<ul>
   <% @lists.each do |list| %>
-  <li>
-    <%= link_to list_path(list) do %>
-    <%= list.name %>
+<li> <%= link_to list_path(list) do %>
+    <%= list.name %> </li>
     <%end %>
-  </li>
-  <ul>
+</ul>
+
   <% end %>
 
+<div class="btn btn-success">
 <%= link_to "Create new list", lists_new_path %>
+</div>
 </div>
