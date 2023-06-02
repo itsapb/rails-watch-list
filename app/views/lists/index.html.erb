@@ -1,17 +1,16 @@
-
 <div class="container pt-5">
-<h2>Your Lists</h2>
-<ul>
-  <% @lists.each do |list| %>
-<li> <%= link_to list.name, list_path(list)%>
-<% if list.photo.key? %>
-    <%= cl_image_tag(list.photo.key, width: 200, height: 200, crop: :fill) %>
-    <% end %></li>
-  <% end %>
+  <h2>Your Lists</h2>
+  <ul>
+    <% @lists.each do |list| %>
+    <li> <%= link_to list.name, list_path(list)%>
+      <% if list.photo.key? %>
+      <%= cl_image_tag(list.photo.key, width: 200, height: 200, crop: :fill) %>
+      <% end %>
+    </li> <br>
+    <% end %>
   </ul>
 
-<div class="btn btn-ghost">
-<%= link_to "Create new list", new_list_path %>
-</div>
-</div>
+  <div class="btn btn-ghost">
+    <%= link_to "Create new list", new_list_path %>
+  </div>
 </div>
