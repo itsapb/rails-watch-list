@@ -1,17 +1,29 @@
+<div class="pt-3">
+</div>
 <div class="container"><h2><%= @list.name %></h2>
 <%#= display all associated bookmarks  %>
+<div class="pt-3">
+</div>
     <% if @list.photo.key? %>
     <%= cl_image_tag(@list.photo.key, width: 300, height: 400, crop: :fill) %>
     <% end %>
 <% @list.bookmarks.each do |bookmark| %>
 <p>Title: <%= bookmark.movie.title%><br></p>
-<p>Comment: <%= bookmark.comment%></p>
+<p>Comment: <%= bookmark.comment%></p><br>
 <%= link_to "Delete bookmark", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <% end %>
+<div>
+<div class="pt-3">
+</div>
+<div class="btn btn-ghost">
 <%= link_to "Create new bookmark", new_bookmark_path(@list) %><br>
+</div>
+<div class="btn btn-ghost">
 <%= link_to "go home", lists_path%>
+</div>
+<div class="btn btn-ghost">
 <%= link_to "Delete list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-
-
+</div>
+</div>
 
 </div>
