@@ -35,6 +35,8 @@ gem 'simple_form'
 
 gem 'sassc-rails'
 
+gem "cloudinary"
+
 gem "dotenv-rails", groups: [:development, :test]
 
 # Use Redis adapter to run Action Cable in production

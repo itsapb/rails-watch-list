@@ -9,8 +9,10 @@
     <%= list.name %> </li>
     <%end %>
 </ul>
-
   <% end %>
+
+  <%= cl_image_tag("coohpib0gkmcx53tq3wg",
+      width: 400, height: 300, crop: :fill) %>
 
 <div class="btn btn-success">
 <%= link_to "Create new list", new_list_path %>
