@@ -1,9 +1,15 @@
+<div class="container pt-5">
 <h1>Create a list</h1>
 
 
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
-  <%= f.submit %>
   <%= f.input :photo, as: :file %>
+  <%= f.submit %>
   <% end  %>
+  <div class="pt-3">
+  <div class="btn btn-ghost">
 <%= link_to "go home", lists_path%>
+</div>
+</div>
+</div>

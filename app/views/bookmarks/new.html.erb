@@ -1,11 +1,12 @@
-<div class="container align-center">
-<h1>Create a bookmark</h1>
+<div class="container align-center pt-5">
+  <h1>Create a bookmark</h1>
 
-<%= simple_form_for @bookmark do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.button :submit %>
-<% end %>
-<div class="btn btn-alert">
-<%= link_to "go home", lists_path%></div>
+  <%= simple_form_for @bookmark do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.button :submit %>
+  <% end %>
+<div class="btn btn-ghost">
+  <%= link_to "go home", lists_path%>
+</div>
 </div>
