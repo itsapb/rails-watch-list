@@ -7,11 +7,13 @@
     <% if @list.photo.key? %>
     <%= cl_image_tag(@list.photo.key, width: 300, height: 400, crop: :fill) %>
     <% end %>
+
 <% @list.bookmarks.each do |bookmark| %>
 <p>Title: <%= bookmark.movie.title%><br></p>
-<p>Comment: <%= bookmark.comment%></p><br>
+<p>Comment: <%= bookmark.comment%></p>
 <%= link_to "Delete bookmark", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <% end %>
+<br>
 <div>
 <div class="pt-3">
 </div>
