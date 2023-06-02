@@ -5,14 +5,12 @@
 
 <ul>
   <% @lists.each do |list| %>
-<li> <%= link_to list_path(list) do %>
-    <%= list.name %> </li>
-    <%end %>
-</ul>
+<li> <%= link_to list.name, list_path(list)%>
+<% if list.photo.key? %>
+    <%= cl_image_tag(list.photo.key, width: 300, height: 400, crop: :fill) %>
+    <% end %></li>
   <% end %>
-
-  <%= cl_image_tag("coohpib0gkmcx53tq3wg",
-      width: 400, height: 300, crop: :fill) %>
+  </ul>
 
 <div class="btn btn-success">
 <%= link_to "Create new list", new_list_path %>
